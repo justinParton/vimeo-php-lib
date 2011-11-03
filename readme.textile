@@ -18,32 +18,35 @@ ftp login:              unless you got a better way to get those files up to the
             fill it out the form:
                 - it is paramount that you add a callback url to this form; 
                               
-                                when i filled out this form i chose an url address that pointed to where my upload library would be stored TEMPORARILY
-                                because we have to query the authentication server to give your upload script rights to upload. so here is what i did.
-                                i ftp'd the vimeo php library to a folder on my church web server. the location of the folder on my church web server is the address 
-                                i put into the callback url box.      
+when i filled out this form i chose an url address that pointed to where my upload library would be stored TEMPORARILY
+because we have to query the authentication server to give your upload script rights to upload. so here is what i did.
+i ftp'd the vimeo php library to a folder on my church web server. the location of the folder on my church web server is the address 
+i put into the callback url box.      
 
-                              my address was http://www.gbfic.org/ 23/upload/index.php  (23 is my demo folder, upload is the subdirectory)   
+my address was http://www.gbfic.org/ 23/upload/index.php  (23 is my demo folder, upload is the subdirectory)   
     
 
-          in a couple of days they will approve it. this is by far the longest part of the whole process.
+in a couple of days they will approve it. this is by far the longest part of the whole process.
 
-    side note: this is the same page that will have your consumer secret and consumer key (which is needed when your application is approved) on step 4.
+side note: this is the same page that will have your consumer secret and consumer key (which is needed when your application is approved) on step 4.
 
 
 2.  install  phpCLI on the computer system you will be using. i used the installer for windows.
             
-	- i used the latest version of php for apache. only because i knew i wasn't using a web server. 
-                                ( you don't need a webserver or any other software for what we are doing)
-	 - if your using window, pick the installers
+- i used the latest version of php for apache. only because i knew i wasn't using a web server. 
+
+       ( you don't need a webserver or any other software for what we are doing)
+
+- if your using window, pick the installers
 
 3. update your path variable to reflect the new php directory on your hard drive.
              
-             windows xp: http://www.computerhope.com/issues/ch000549.htm
-             windows vista: http://geekswithblogs.net/renso/archive/2009/10/21/how-to-set-the-windows-path-in-windows-7.aspx
-             windows 7: http://geekswithblogs.net/renso/archive/2009/10/21/how-to-set-the-windows-path-in-windows-7.aspx 
+windows xp: http://www.computerhope.com/issues/ch000549.htm
+windows vista: http://geekswithblogs.net/renso/archive/2009/10/21/how-to-set-the-windows-path-in-windows-7.aspx
+windows 7: http://geekswithblogs.net/renso/archive/2009/10/21/how-to-set-the-windows-path-in-windows-7.aspx 
 
-      check to make sure everything has been set up right:
+check to make sure everything has been set up right:
+                
                 Open up an command prompt, and enter the command "php". A prompt should automatically follow with the words CLI. 
                 if you got that, your good to go.  If not, enter the path at the command line, and make sure that your directory to the php folder is 
                 present, it will be at the end. if not,  close the command line window and reopen it, and execute the path command. if it still doesn't work, you have a php  
@@ -66,23 +69,10 @@ ftp login:              unless you got a better way to get those files up to the
                 those login keys are labeled. in your upload .php file, replace:
                          
             
-                           the consumer key, 
-		   the consumer_secret, 
+                     <pre>      the consumer key, the consumer_secret, </pre>
 		 
-                           the access token
-  		   the access token secret 
+                         <pre>     the access token the access token secret </pre>
 
-      other things that should be noted:
-                       
-                     theres a line of code that says  
-                         'title => 'GBFIC:' .  $today,
-                          and 
-                         'description' =>  $today,
-                          
-            those are there to specifically put the date in the video so that i know which one is from what day.  if you want a static text do this:
-                      'title' => 'TEXT HERE',
-                     'description => 'TEXT HERE',
-           but remember, your coding in php so image sure everything is in its proper place
 
               save the file.
 
