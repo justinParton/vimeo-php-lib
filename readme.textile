@@ -8,26 +8,26 @@ These will be the things you will need:
 <pre>
 PHPCLI - http://windows.php.net/download/
 Vimeo php library - This Repository
-A web server: We need a webserver Temporarily so we can set up authentication. i used my church website
+A web server: We need a webserver Temporarily so we can set up authentication.
 ftp login: Unless you got a better way to get those files up to the web server.
 </pre>
 
 h3. 1. Developer keys.
 
-Go Here: http://vimeo.com/api/applications
+Go Here: <pre>http://vimeo.com/api/applications</pre>
 click the link that says "Start a new Application? Start Here"
 fill it out the form:
 <pre>- it is paramount that you add a callback url to this form; </pre>
                               
-when i filled out this form i chose an url address that pointed to where my upload library would be stored TEMPORARILY
+	When i filled out this form i chose an url address that pointed to where my upload library would be stored TEMPORARILY
 because we have to query the authentication server to give your upload script rights to upload. so here is what i did.
 i ftp'd the vimeo php library to a folder on my church web server. the location of the folder on my church web server is the address 
 i put into the callback url box.      
 
-my address was http://www.gbfic.org/ 23/upload/index.php  (23 is my demo folder, upload is the subdirectory)   
+My address was http://www.server_here.org/ 23/upload/index.php  (23 is my demo folder, upload is the subdirectory)   
     
 
-in a couple of days they will approve it. this is by far the longest part of the whole process.
+In a couple of days they will approve it. this is by far the longest part of the whole process.
 
 <pre>side note: this is the same page that will have your consumer secret and consumer key (which is needed when your application is approved) on step 4.</pre>
 
@@ -86,7 +86,7 @@ And then save the file.
 h3. 5.    Execution:
 
 place vimeo.php and upload.php in a directory on your hard drive. 
-Go to that folder on the command line and execute "php upload.php"
+Go to that folder on the command line and execute <pre>"php upload.php"</pre>
 and it will attempt to upload a "ready.mp4" in the same folder to vimeo.com
       
 all i did from there was create a batch file to click on that had the commands php upload.php in it and execute it after i do postprocessing
