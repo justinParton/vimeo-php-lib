@@ -5,14 +5,15 @@ Using these files, along with the PHPCLI, it is possible to have an automated up
 h1. RUN THROUGH
 
 These will be the things you will need:
-
+<pre>
 PHPCLI -                       http://windows.php.net/download/
 Vimeo php library -     www.gbfic.org/23/upload/1.zip
 
 A web server :    we need a webserver Temporarily so we can set up authentication. i used my church website
-ftp login:              unless you got a better way to get those files up to the web server.
+ftp login:        unless you got a better way to get those files up to the web server.
+</pre>
 
-1.  register for a developer key.
+h3. 1.   register for a developer key.
            Go Here: http://vimeo.com/api/applications
             click the link that says "Start a new Application? Start Here"
             fill it out the form:
@@ -31,7 +32,7 @@ in a couple of days they will approve it. this is by far the longest part of the
 side note: this is the same page that will have your consumer secret and consumer key (which is needed when your application is approved) on step 4.
 
 
-2.  install  phpCLI on the computer system you will be using. i used the installer for windows.
+h3. 2.  install  phpCLI on the computer system you will be using. i used the installer for windows.
             
 - i used the latest version of php for apache. only because i knew i wasn't using a web server. 
 
@@ -39,13 +40,14 @@ side note: this is the same page that will have your consumer secret and consume
 
 - if your using window, pick the installers
 
-3. update your path variable to reflect the new php directory on your hard drive.
-             
+h3. 3. update your path variable to reflect the new php directory on your hard drive.
+   <pre>          
 windows xp: http://www.computerhope.com/issues/ch000549.htm
 windows vista: http://geekswithblogs.net/renso/archive/2009/10/21/how-to-set-the-windows-path-in-windows-7.aspx
 windows 7: http://geekswithblogs.net/renso/archive/2009/10/21/how-to-set-the-windows-path-in-windows-7.aspx 
+</pre>
 
-check to make sure everything has been set up right:
+h4. check to make sure everything has been set up right:
                 
                 Open up an command prompt, and enter the command "php". A prompt should automatically follow with the words CLI. 
                 if you got that, your good to go.  If not, enter the path at the command line, and make sure that your directory to the php folder is 
@@ -53,7 +55,7 @@ check to make sure everything has been set up right:
                 installation issue, i had a couple of these and had to reinstall a couple of times before it actually worked itself out. as much as i tried, i never got it working,
                 it just ended up working itself out.
 
-4. this is the easiest part. 
+h3. 4. this is the easiest part. 
           using the vimeo files that you downloaded at the top of this page, open them up and open index.php in a text editor
                             things you need to change:
                                         Consumer key:  this is that consumer key i talked about in step 1(replace CONSUMER_KEY with the actual "consumer key")
@@ -62,9 +64,9 @@ check to make sure everything has been set up right:
         save it, close index.php and open upload.php….Keep this open but go ahead and upload the vimeo php folder to your designated spot on your webserver.
 
            Heres what happens:       go to the vimeo php library folder  that sits on your webserver
-                                                         ----> click authenticate link 
-                                                         ---------->  it goes to vimeo, comes back to your page automatically  ( the reasons we need a callback url)
-                                                         --------------> it displays the necessary login keys you need
+----> click authenticate link 
+---------->  it goes to vimeo, comes back to your page automatically  ( the reasons we need a callback url)
+--------------> it displays the necessary login keys you need
                                
                 those login keys are labeled. in your upload .php file, replace:
                          
