@@ -6,11 +6,10 @@ h1. RUN THROUGH
 
 These will be the things you will need:
 <pre>
-PHPCLI -                       http://windows.php.net/download/
-Vimeo php library -     www.gbfic.org/23/upload/1.zip
-
-A web server :    we need a webserver Temporarily so we can set up authentication. i used my church website
-ftp login:        unless you got a better way to get those files up to the web server.
+PHPCLI - http://windows.php.net/download/
+Vimeo php library - This Repository
+A web server: We need a webserver Temporarily so we can set up authentication. i used my church website
+ftp login: Unless you got a better way to get those files up to the web server.
 </pre>
 
 h3. 1.   register for a developer key.
