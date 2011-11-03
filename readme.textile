@@ -1,12 +1,7 @@
-h1. Vimeo Advanced API PHP Library
+h1. PHPCLI VIMEO Upload
 
-This library is all set to go with version 2 of our API. Just create the object and call a method like this:
+Using these files, along with the PHPCLI, it is possible to have an automated upload to vimeo from a broadcasting, or any other workstation.
 
-<pre>$vimeo = new phpVimeo('your consumer key', 'your consumer secret');
-$videos = $vimeo->call('vimeo.videos.getUploaded', array('user_id' => 'brad'));</pre>
+h1. Support
 
-The <code>index.php</code> file included will show you how to get an access token so that you can query the API for private items. To take a look at an example of how to upload a file, check out <code>upload.php</code>.
-
-h2. Support
-
-If you come across any bugs, or have any suggestions, please post them in our "API Forum":http://www.vimeo.com/forum:API.
+If you have any questons, email me at justin.parton[AT]gmail.com
