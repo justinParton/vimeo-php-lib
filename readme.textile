@@ -29,19 +29,22 @@ my address was http://www.gbfic.org/ 23/upload/index.php  (23 is my demo folder,
 
 in a couple of days they will approve it. this is by far the longest part of the whole process.
 
-side note: this is the same page that will have your consumer secret and consumer key (which is needed when your application is approved) on step 4.
+<pre>side note: this is the same page that will have your consumer secret and consumer key (which is needed when your application is approved) on step 4.</pre>
 
 
-h3. 2.  install  phpCLI on the computer system you will be using. i used the installer for windows.
+h3. 2.  install  phpCLI 
+
+Install it on the computer system you will be using. i used the installer for windows.
             
 - i used the latest version of php for apache. only because i knew i wasn't using a web server. 
 
-       ( you don't need a webserver or any other software for what we are doing)
+( you don't need a webserver or any other software for what we are doing)
 
 - if your using window, pick the installers
 
 h3. 3. update your path variable to reflect the new php directory on your hard drive.
-   <pre>          
+
+<pre>          
 windows xp: http://www.computerhope.com/issues/ch000549.htm
 windows vista: http://geekswithblogs.net/renso/archive/2009/10/21/how-to-set-the-windows-path-in-windows-7.aspx
 windows 7: http://geekswithblogs.net/renso/archive/2009/10/21/how-to-set-the-windows-path-in-windows-7.aspx 
@@ -49,41 +52,42 @@ windows 7: http://geekswithblogs.net/renso/archive/2009/10/21/how-to-set-the-win
 
 h4. check to make sure everything has been set up right:
                 
-                Open up an command prompt, and enter the command "php". A prompt should automatically follow with the words CLI. 
-                if you got that, your good to go.  If not, enter the path at the command line, and make sure that your directory to the php folder is 
-                present, it will be at the end. if not,  close the command line window and reopen it, and execute the path command. if it still doesn't work, you have a php  
-                installation issue, i had a couple of these and had to reinstall a couple of times before it actually worked itself out. as much as i tried, i never got it working,
-                it just ended up working itself out.
+Open up an command prompt, and enter the command "php". A prompt should automatically follow with the words CLI. 
+if you got that, your good to go.  If not, enter the path at the command line, and make sure that your directory to the php folder is 
+present, it will be at the end. if not,  close the command line window and reopen it, and execute the path command. if it still doesn't work, you have a php  
+installation issue, i had a couple of these and had to reinstall a couple of times before it actually worked itself out. as much as i tried, i never got it working,
+it just ended up working itself out.
 
-h3. 4. this is the easiest part. 
-          using the vimeo files that you downloaded at the top of this page, open them up and open index.php in a text editor
-                            things you need to change:
-                                        Consumer key:  this is that consumer key i talked about in step 1(replace CONSUMER_KEY with the actual "consumer key")
-                                        Consumer secret: same as above. replace CONSUMER_SECRET with the actual "consumer secret"
+h3. 4. this is the easiest part.
+ 
+using the vimeo files that you downloaded at the top of this page, open them up and open index.php in a text editor
+things you need to change:
+Consumer key:  this is that consumer key i talked about in step 1(replace CONSUMER_KEY with the actual "consumer key")
+Consumer secret: same as above. replace CONSUMER_SECRET with the actual "consumer secret"
          
-        save it, close index.php and open upload.php….Keep this open but go ahead and upload the vimeo php folder to your designated spot on your webserver.
+save it, close index.php and open upload.php….Keep this open but go ahead and upload the vimeo php folder to your designated spot on your webserver.
 
-           Heres what happens:       go to the vimeo php library folder  that sits on your webserver
+Heres what happens:       go to the vimeo php library folder  that sits on your webserver
 ----> click authenticate link 
 ---------->  it goes to vimeo, comes back to your page automatically  ( the reasons we need a callback url)
 --------------> it displays the necessary login keys you need
                                
-                those login keys are labeled. in your upload .php file, replace:
-                         
-            
-                     <pre>      the consumer key, the consumer_secret, </pre>
+those login keys are labeled. in your upload .php file, replace:
+                                
+<pre>      the consumer key, the consumer_secret, </pre>
 		 
-                         <pre>     the access token the access token secret </pre>
+<pre>     the access token the access token secret </pre>
 
 
               save the file.
 
-5.    Execution:
-                     place vimeo.php and upload.php in a directory on your hard drive. 
-                    Go to that folder on the command line and execute "php upload.php"
-                    and it will attempt to upload a "ready.mp4" in the same folder to vimeo.com
+h3. 5.    Execution:
+
+place vimeo.php and upload.php in a directory on your hard drive. 
+Go to that folder on the command line and execute "php upload.php"
+and it will attempt to upload a "ready.mp4" in the same folder to vimeo.com
       
-       all i did from there was create a batch file to click on that had the commands php upload.php in it and execute it after i do postprocessing
+all i did from there was create a batch file to click on that had the commands php upload.php in it and execute it after i do postprocessing
 
 h1. Support
 
