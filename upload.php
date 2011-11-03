@@ -4,6 +4,10 @@ include 'vimeo.php';
 $vimeo = new phpVimeo('CONSUMER_KEY', 'CONSUMER_SECRET', 'ACCESS_TOKEN', 'ACCESS_TOKEN_SECRET');
 
 try {
+	
+	//Recall that the video file is relative to the CMD current directory so:
+	//   i call the file like this C:\php uploader/upload.php... 
+	//   the file must be in C:\
     $video_id = $vimeo->upload('PATH_TO_VIDEO_FILE');
 
     if ($video_id) {
