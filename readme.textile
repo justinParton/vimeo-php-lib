@@ -12,7 +12,7 @@ A web server: We need a webserver Temporarily so we can set up authentication. i
 ftp login: Unless you got a better way to get those files up to the web server.
 </pre>
 
-h3. 1.   register for a developer key.
+h3. 1. Developer keys.
 
 Go Here: http://vimeo.com/api/applications
 click the link that says "Start a new Application? Start Here"
@@ -42,8 +42,11 @@ Install it on the computer system you will be using. i used the installer for wi
 
 - if your using window, pick the installers
 
-h3. 3. update your path variable to reflect the new php directory on your hard drive.
+h3. 3. Update PATH
 
+Add the location of your php directory to the PATH variable.
+
+The links below will detail the instruction for windows clients: 
 <pre>          
 windows xp: http://www.computerhope.com/issues/ch000549.htm
 windows vista: http://geekswithblogs.net/renso/archive/2009/10/21/how-to-set-the-windows-path-in-windows-7.aspx
@@ -58,7 +61,7 @@ present, it will be at the end. if not,  close the command line window and reope
 installation issue, i had a couple of these and had to reinstall a couple of times before it actually worked itself out. as much as i tried, i never got it working,
 it just ended up working itself out.
 
-h3. 4. this is the easiest part.
+h3. 4. Upload configuraton (easy part)
  
 using the vimeo files that you downloaded at the top of this page, open them up and open index.php in a text editor
 things you need to change:
@@ -74,12 +77,11 @@ Heres what happens:       go to the vimeo php library folder  that sits on your 
                                
 those login keys are labeled. in your upload .php file, replace:
                                 
-<pre>      the consumer key, the consumer_secret, </pre>
-		 
-<pre>     the access token the access token secret </pre>
+<pre>  $vimeo = new phpVimeo('CONSUMER_KEY', 'CONSUMER_SECRET', 'ACCESS_TOKEN', 'ACCESS_TOKEN_SECRET'); </pre>
 
+with the appropriate keys
 
-              save the file.
+And then save the file.
 
 h3. 5.    Execution:
 
