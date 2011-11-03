@@ -14,10 +14,11 @@ ftp login:        unless you got a better way to get those files up to the web s
 </pre>
 
 h3. 1.   register for a developer key.
-           Go Here: http://vimeo.com/api/applications
-            click the link that says "Start a new Application? Start Here"
-            fill it out the form:
-                - it is paramount that you add a callback url to this form; 
+
+Go Here: http://vimeo.com/api/applications
+click the link that says "Start a new Application? Start Here"
+fill it out the form:
+<pre>- it is paramount that you add a callback url to this form; </pre>
                               
 when i filled out this form i chose an url address that pointed to where my upload library would be stored TEMPORARILY
 because we have to query the authentication server to give your upload script rights to upload. so here is what i did.
