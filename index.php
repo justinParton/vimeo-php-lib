@@ -89,14 +89,15 @@ switch ($_SESSION['vimeo_state']) {
         <p>Click the link to go to Vimeo to authorize your account.</p>
         <p><a href="<?= $authorize_link ?>"><?php echo $authorize_link ?></a></p>
     <?php endif ?>
-
-    <?php if ($ticket): ?>
-        <pre><?php print_r($ticket) ?></pre>
-    <?php endif ?>
-
-    <?php if ($videos): ?>
-        <pre><?php print_r($videos) ?></pre>
-    <?php endif ?>
-
+          
+    
+       <?php   if ($_SESSION['vimeo_state'] == 'done'):?>
+       <?php    print_r('Access Token: '); ?>
+       <?php   print_r($_SESSION['oauth_access_token']);  print_r('<br />'); ?>
+       <?php   print_r('Access Token Secret: '); ?>
+       <?php   print_r($_SESSION['oauth_access_token_secret']); ?>
+       <?php   endif ?>
+    
+    
 </body>
 </html>
