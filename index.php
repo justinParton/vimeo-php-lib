@@ -2,12 +2,11 @@
 require_once('vimeo.php');
 session_start();
 
-$urlkey = $_GET['x'];
-$urlkey2 = $_GET['y'];
+
 
 
 // Create the object and enable caching
-$vimeo = new phpVimeo($urlkey, $urlkey2);
+$vimeo = new phpVimeo('CONSUMER_KEY', 'CONSUMER_SECRET');
 $vimeo->enableCache(phpVimeo::CACHE_FILE, './cache', 300);
 
 // Clear session
