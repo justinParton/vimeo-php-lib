@@ -7,9 +7,10 @@ h1. RUN THROUGH
 These will be the things you will need:
 <pre>
 PHPCLI - http://windows.php.net/download/
-Vimeo php library - This Repository
-A web server: We need a webserver Temporarily so we can set up authentication.
-ftp login: Unless you got a better way to get those files up to the web server.
+Vimeo php library - This Repository  ( called vimeo folder from now on)
+A Web Server - capable of parsing php.
+ftp login - to put the files on the server.
+
 </pre>
 
 h3. 1. Developer keys.
@@ -19,17 +20,10 @@ click the link that says "Start a new Application? Start Here"
 fill it out the form:
 <pre>- it is paramount that you add a callback url to this form; </pre>
                               
-	When i filled out this form i chose an url address that pointed to where my upload library would be stored TEMPORARILY
-because we have to query the authentication server to give your upload script rights to upload. so here is what i did.
-i ftp'd the vimeo php library to a folder on my church web server. the location of the folder on my church web server is the address 
-i put into the callback url box.      
-
-My address was http://www.server_here.org/ 23/upload/index.php  (23 is my demo folder, upload is the subdirectory)   
-    
+        the callback URL is the location where you will store the php-files in this repository on your webserver. This is
+not where you will be doing the command line upload, this is just where we initially set the files to get our access keys.
 
 In a couple of days they will approve it. this is by far the longest part of the whole process.
-
-<pre>side note: this is the same page that will have your consumer secret and consumer key (which is needed when your application is approved) on step 4.</pre>
 
 
 h3. 2.  install  phpCLI 
@@ -62,30 +56,35 @@ installation issue, i had a couple of these and had to reinstall a couple of tim
 it just ended up working itself out.
 
 h3. 4. Upload configuraton (easy part)
- 
-using the vimeo files that you downloaded at the top of this page, open them up and open index.php in a text editor
-things you need to change:
-Consumer key:  this is that consumer key i talked about in step 1(replace CONSUMER_KEY with the actual "consumer key")
-Consumer secret: same as above. replace CONSUMER_SECRET with the actual "consumer secret"
-         
-save it, close index.php and open upload.php….Keep this open but go ahead and upload the vimeo php folder to your designated spot on your webserver.
 
-Heres what happens:       go to the vimeo php library folder  that sits on your webserver
+ inside your vimeo folder, open index.php in a text editor and change:
+Consumer key:  this is that consumer key i talked about in step 1(replace CONSUMER_KEY with the actual "consumer key" given on your vimeo App settings)
+Consumer secret: replace CONSUMER_SECRET with the actual "consumer secret" on the vimeo app settings page
+         
+save index.php and close it. Now upload the entire vimeo folder to the callback url folder on your webserver (make sure cache folder gets uploaded also).
+
+Once you have done that: open up a browser and go to your callback url.
 ----> click authenticate link 
 ---------->  it goes to vimeo, comes back to your page automatically  ( the reasons we need a callback url)
---------------> it displays the necessary login keys you need
+--------------> it displays the necessary access keys you need
                                
-those login keys are labeled. in your upload .php file, replace:
-                                
+those login keys are labeled.
+
+h3. ON YOUR DESKTOP
+
+open up the vimeo folder, and open up "upload.php".
+
+look for this line:
 <pre>  $vimeo = new phpVimeo('CONSUMER_KEY', 'CONSUMER_SECRET', 'ACCESS_TOKEN', 'ACCESS_TOKEN_SECRET'); </pre>
 
+change: CONSUMER_KEY, CONSUMER_SECRET, ACCESS_TOKEN, ACCESS_TOKEN_SECRET
 with the appropriate keys
 
 And then save the file.
 
 h3. 5.    Execution:
 
-place vimeo.php and upload.php in a directory on your hard drive. 
+place the vimeo folder in a directory on your hard drive. (i put mine in my video folder)
 Go to that folder on the command line and execute <pre>"php upload.php"</pre>
 and it will attempt to upload a "ready.mp4" in the same folder to vimeo.com
       
